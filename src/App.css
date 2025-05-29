@@ -32,7 +32,6 @@ h1 {
   align-items: center;
   gap: 20px;
 }
-
 /* Sección del juego (9 casillas) */
 .game {
   display: grid;
@@ -123,6 +122,10 @@ h1 {
 
 .winner button:hover {
   background-color: #21a1f1;
+}
+
+.win {
+  margin: 20px;
 }
 
 /* Animaciones */
