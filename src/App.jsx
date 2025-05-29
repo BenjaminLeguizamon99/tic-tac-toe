@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import Square from './components/Square'
+import confetti from 'canvas-confetti';
+
 
 const TURNS = {
 	X: 'x',
@@ -44,6 +46,10 @@ function App() {
 		return null;
 	}
 
+	const checkEndGame = (newBoard) => {
+		return newBoard.every((square) => square != null)
+	}
+
 	// Funcion para actualizar el tablero cada vez que se hace click sobre un cuadrado.
 	const updateBoard = (index) =>{
 		// no actualizamos esta posicion si ya tiene algo
@@ -61,7 +67,10 @@ function App() {
 		// revisamos si hay ganador
 		const newWinner = checkWinner(newBoard)
 		if(newWinner) {
+			confetti()
 			setWinner(newWinner);
+		} else if (checkEndGame(newBoard)) {
+			setWinner(false);
 		}
     }
 	

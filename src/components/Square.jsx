@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../App.css';
+import confetti from 'canvas-confetti'
 
 function Square({ children, updateBoard, index, isSelected }) {
 
