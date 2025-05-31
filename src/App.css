@@ -74,6 +74,17 @@ h1 {
   font-weight: bold;
   border: 2px solid #fff;
 }
+.btn-reset {
+  background-color: #61dafb;
+  color: #1e1e2f;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
 
 /* Fondo del modal */
 .winner {
